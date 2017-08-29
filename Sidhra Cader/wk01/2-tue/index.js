@@ -27,3 +27,17 @@ var colors = ["Pink", "Purple", "Black", "Blue", "Yellow"];
 for (var i = 0; i < colors.length; i++) {
   console.log("My #" + (i + 1) + " choice is " + colors[i]);
 }
+
+var print;
+var rows = 9;
+for (var i = 1; i <= rows; i++) {
+  var cols = (i * 2) - 1;
+  print = "";
+    for (var s = 1; s <= ((rows * 2) - 1 - cols)/2 ; s++) {
+      print = print + "  ";
+    }
+    for (var j = 1; j <= cols; j++) {
+      print = print + " $";
+    }
+      console.log(print);
+}
