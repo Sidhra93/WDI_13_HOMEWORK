@@ -28,16 +28,17 @@ for (var i = 0; i < colors.length; i++) {
   console.log("My #" + (i + 1) + " choice is " + colors[i]);
 }
 
+var odd;
 var print;
-var rows = 9;
-for (var i = 1; i <= rows; i++) {
-  var cols = (i * 2) - 1;
+var lines = 8;
+for (var rows = 1; rows <= lines; rows++) {
+  odd = (rows * 2) -1;
   print = "";
-    for (var s = 1; s <= ((rows * 2) - 1 - cols)/2 ; s++) {
-      print = print + "  ";
-    }
-    for (var j = 1; j <= cols; j++) {
-      print = print + " $";
-    }
-      console.log(print);
+  for (var sp = 1; sp <= ((lines * 2) - 1 - odd)/2; sp++) {
+    print = print + "  ";
+  }
+  for (var cols = 1; cols <= odd ; cols++) {
+    print = print + " $"
+  }
+  console.log(print);
 }
