@@ -4,8 +4,8 @@
 var origin = "Kooyong";
 var dest = "Flagstaff";
 var route;
-var outRoute;
 var reverseLine =[];
+var numberOfStops;
 
 var trainLines = [
   {
@@ -23,7 +23,8 @@ var trainLines = [
 ];
 
 for (var i = 0; i < trainLines.length; i++) {
-  for (var j = 0; j  < trainLines[i].stops.length; j++) {
+  numberOfStops = trainLines[i].stops.length;
+  for (var j = 0; j  < numberOfStops; j++) {
     if (origin === trainLines[i].stops[j]) {
       if (trainLines[i].stops.indexOf(origin) < trainLines[i].stops.indexOf(dest)) {
         console.log(trainLines[i].name + " Line: \n \n");
@@ -34,7 +35,7 @@ for (var i = 0; i < trainLines.length; i++) {
         reverseLine = trainLines[i].stops.reverse();
         console.log(trainLines[i].name + " Line: \n \n");
         route = reverseLine.slice(reverseLine.indexOf(origin),reverseLine.indexOf(dest) + 1);
-        console.log((route.join()).replace(/,/g, " -----> "));
+        console.log((route.join(" ----> ")));
         console.log("\n" + (route.indexOf(dest)) + " stops total");
       }
     }
