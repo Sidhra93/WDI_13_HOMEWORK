@@ -62,11 +62,12 @@ a{
 .nav ul {
   list-style: none;
   padding: 0;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.4;
 }
 .heading {
   text-transform: uppercase;
+  font-weight: bolder;
 }
 
 footer {
