@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 50px 0 0 0;
+
+}
+
+main {
+  text-align: center;
+  padding: 50px 0 100px 0;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.savings,
+.checking {
+  background: #d3d3d3;
+  text-align: center;
+  border: 10px outset #c0c0c0;
+  width: 40%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+p {
+  font-size: 12px;
+}
+
+.savingsBalance,
+.checkingBalance {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+input {
+  text-align: center;
+  padding: 5px 0;
+  width: 12em;
+  letter-spacing: 1px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+button {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 5px;
+  width: 8em;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+button:hover{
+  cursor: pointer;
+}
