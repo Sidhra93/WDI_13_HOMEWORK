@@ -1,0 +1,16 @@
+button{
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.heads,
+.tails {
+  display: inline-block;
+  text-align: center;
+}
+
+.score,
+.coin,
+.result {
+  text-align: center;
+}
