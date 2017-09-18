@@ -15,13 +15,27 @@ var checkLetter = function(){
   var letters = game.word.split("");
   var spaces = game.spaces.split("");
   var letterGuess = letterInput.value;
-  if (letters.includes(letterGuess)) {
-    spaces[letters.indexOf(letterGuess)] = letterGuess;
-    game.spaces = spaces.join("");
-
-  } else {
-    wrongGuess.textContent += letterGuess;
-  }
+  //
+  //2ND
+  //
+  // for (var i = 0; i < letters.length; i++) {
+  //   if (letters[i] === letterGuess) {
+  //     spaces[i] = letterGuess;
+  //     game.spaces = spaces.join("");
+  //   } else if (letters[i] !== letterGuess) {
+  //     console.log(letterGuess);
+  //   }
+  // }
+  //
+  //1ST
+  //
+  // if (letters.includes(letterGuess)) {
+  //   spaces[letters.indexOf(letterGuess)] = letterGuess;
+  //   game.spaces = spaces.join("");
+  //
+  // } else {
+  //   wrongGuess.textContent += letterGuess;
+  // }
   renderWord();
 }
 
