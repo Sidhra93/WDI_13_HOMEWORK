@@ -19,10 +19,10 @@ users = {
 users["Jonathan"][:twitter]
 
 # add number 7 to Erik's fav numbers
-users["Erik"][:favorite_numbers].push(7)
+users["Erik"][:favorite_numbers].push(7) # users["Erik"][:favorite_numbers] << 7
 
 # add yourself to users
-users.merge!({"Sidhra"=>{:twitter=>"dramasaurusrex",:favorite_numbers=>[19, 6, 93]}})
+users["Sidhra"] = {twitter: "dramasaurusrex",favorite_numbers: [19, 6, 93]}
 
 # return array of erik's numbers
 users["Erik"][:favorite_numbers]
@@ -35,11 +35,11 @@ users["Anil"][:favorite_numbers].select do |number|
   number.even?
 end
 
-binding.pry
-
 # return array of fav numbers of all users
-users.each do |user|
-  user[:favorite_numbers]
+numbers = []
+users.each_value do |name|
+  numbers.push(name[:favorite_numbers])
 end
 
 #array of numbers sorted and excluding duplicates
+numbers.flatten.sort.uniq!
