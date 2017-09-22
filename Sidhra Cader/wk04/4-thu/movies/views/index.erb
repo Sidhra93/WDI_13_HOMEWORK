@@ -1,6 +1,4 @@
-<%= "Title: #{@data["Title"]}" %><br>
-<%= "Year: #{@data["Year"]}" %><br>
-<%= "Runtime: #{@data["Runtime"]}" %><br>
-<%= "Genre: #{@data["Genre"]}" %><br>
-<%= "Actors: #{@data["Actors"]}" %><br>
-<%= "Plot: #{@data["Plot"]}" %>
+<form action="/results" method="get">
+  <input type="text" name="search">
+  <button type="submit">Search</button>
+</form>

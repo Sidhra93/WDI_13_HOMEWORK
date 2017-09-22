@@ -1,0 +1,4 @@
+<% @data_array.each do |movie| %>
+  <% @movie = movie["Title"] %>
+  <a href="/about?search=<%= movie["Title"] %>"><%= movie["Title"] %></a><br>
+<% end %>
