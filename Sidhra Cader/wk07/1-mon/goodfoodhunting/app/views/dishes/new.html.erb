@@ -6,5 +6,10 @@
   <br>
   <label for="">Image URL</label>
   <textarea name="image_url" rows="3" cols="80"></textarea>
+  <select name="venue">
+    <% @venues.each do |venue| %>
+      <option value="<%= venue.id %>"><%= venue.name %></option>
+    <% end %>
+  </select>
   <button type="submit" name="button">Add</button>
 </form>

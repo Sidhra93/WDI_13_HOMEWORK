@@ -3,26 +3,34 @@ class DishesController < ApplicationController
     @dishes = Dish.all
   end
 
-  def new
+  def show
+    @dish = Dish.find(params[:id])
+    @comments = @dish.comments
+  end
 
+  def new
+    @venues = Venue.all
   end
 
   def create
     dish = Dish.new
     dish.name = params[:name]
     dish.image_url = params[:image_url]
+    dish.venue_id = params[:venue]
     dish.save
     redirect_to '/dishes'
   end
 
   def edit
     @dish = Dish.find(params[:id])
+    @venues = Venue.all
   end
 
   def update
     dish = Dish.find(params[:id])
     dish.name = params[:name]
     dish.image_url = params[:image_url]
+    dish.venue_id = params[:venue]
     dish.save
     redirect_to '/dishes'
   end
