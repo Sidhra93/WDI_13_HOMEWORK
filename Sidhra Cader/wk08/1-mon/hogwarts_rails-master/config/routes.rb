@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root "houses#index"
-  resource :houses, only: [:index, :show]
+  get 'houses/:id', to: 'houses#show'
   resources :students, only: [:index, :show]
 
 end
